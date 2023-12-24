@@ -51,7 +51,8 @@
         startValue: "max", destroy: "min" } }, effect: { type: "trail", options: { trail: { length: { min: 5, max: 10 } } } }, shape: { type: "circle" }, size: { value: 2, animation: { enable: false } }, life: { count: 1, duration: { value: { min: 1,
         max: 2 } } }, move: { enable: true, gravity: { enable: true, acceleration: 9.81, inverse: false }, decay: 0.1, speed: { min: 10, max: 25 }, direction: "outside", outModes: "destroy" } } } }, life: { count: 1 }, effect: { type: "trail", options:
         { trail: { length: { min: 10, max: 30 }, minWidth: 1, maxWidth: 1 } } }, rotate: { path: true }, shape: { type: "circle" }, size: { value: 1 }, move: { enable: true, gravity: { acceleration: 15, enable: true, inverse: true, maxSpeed: 100 }, speed:
-        { min: 10, max: 20 }, outModes: { default: "destroy", top: "none" } } }, sounds: { enable: true, events: [ { event: "particleRemoved", audio: [ "audio.mp3" ] } ], volume: 4 } }; loadParticles(configs);
+        { min: 10, max: 20 }, outModes: { default: "destroy", top: "none" } } }, sounds: { enable: true, events: [ { event: "particleRemoved", filter: "explodeSoundCheck", audio: [ "https://particles.js.org/audio/explosion0.mp3", "https://particles.js.org/audio/explosion1.mp3",
+        "https://particles.js.org/audio/explosion2.mp3" ] } ], volume: 50 } }; loadParticles(configs);
     </script>
 </body>
 
